@@ -183,6 +183,9 @@ void task5()
 * Napisz funkcje, która dla kolekcji danych liczbowych obliczy częstotliwość występowania danej liczby.
 * Napisz funkcję, która dla kolekcji danych liczbowych znajdzie najdłuższy rosnący podciąg.
 * Napisz funkcję, która dla kolekcji danych liczbowych przeniesie te liczby do osobnych kolekcji liczb parzystych i nieparzystych.
+
+
+tablicaLiczb[i] = rand() % (zakresGorny - zakresDolny + 1) + zakresDolny;
 */
 
 int main()
