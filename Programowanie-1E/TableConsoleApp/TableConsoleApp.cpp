@@ -168,6 +168,15 @@ void task4()
 
 }
 
+/*
+Napisz program/funkcję która dla tablicy z liczbami pseudolosowymi policzy 
+średnią arytmetyczną tych liczb.
+*/
+void task5()
+{
+
+}
+
 int main()
 {
 	task4();
