@@ -190,5 +190,6 @@ tablicaLiczb[i] = rand() % (zakresGorny - zakresDolny + 1) + zakresDolny;
 
 int main()
 {
+	std::cout << "dfgjdfg" << std::endl << "dfgj\ndfgh" << '\n' << std::endl;
 	task4();
 }
