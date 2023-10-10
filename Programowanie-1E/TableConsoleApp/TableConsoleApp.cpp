@@ -169,27 +169,230 @@ void task4()
 }
 
 /*
-Napisz program/funkcję która dla tablicy z liczbami pseudolosowymi policzy 
+Napisz program/funkcję która dla tablicy z liczbami pseudolosowymi policzy
 średnią arytmetyczną tych liczb.
 */
 void task5()
 {
+	const int size = 10;
+	const int lowerRange = 1;
+	const int upperRange = 10;
 
+	int tabOfNumbers[size];
+
+	srand(time(NULL));
+	for (int i = 0; i < size; i++)
+	{
+		tabOfNumbers[i] = rand() % (upperRange - lowerRange + 1) + lowerRange;
+	}
+
+	std::cout << "Liczby w tablicy:\n";
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << tabOfNumbers[i] << ", ";
+	}
+	std::cout << "\n";
+
+	int sum = 0;
+	for (int i = 0; i < size; i++)
+	{
+		sum += tabOfNumbers[i];
+	}
+
+	int average = sum / size;
+	std::cout << "Średnia liczb to " << average << "\n";
+
+	//Napisz funkcję, która dla kolekcji danych liczbowych policzy ile jest liczb większych od średniej arytmetycznej.
+	int amount = 0;
+	for (int i = 0; i < size; i++)
+	{
+		if (tabOfNumbers[i] > average)
+			amount++;
+	}
+	std::cout << "Ilość liczb większych od średniej to " << amount << "\n";
 }
 
-/*
-* Napisz funkcję, która dla kolekcji danych liczbowych policzy ile jest liczb większych od średniej arytmetycznej.
-* Napisz funkcje, która dla kolekcji danych liczbowych przeniesie te liczby do innej kolekcji w odwrotnej kolejności.
-* Napisz funkcje, która dla kolekcji danych liczbowych obliczy częstotliwość występowania danej liczby.
-* Napisz funkcję, która dla kolekcji danych liczbowych znajdzie najdłuższy rosnący podciąg.
-* Napisz funkcję, która dla kolekcji danych liczbowych przeniesie te liczby do osobnych kolekcji liczb parzystych i nieparzystych.
+//Napisz funkcje, która dla kolekcji danych liczbowych przeniesie te liczby do innej kolekcji w odwrotnej kolejności.
+void task6()
+{
+	const int size = 10;
+	const int lowerRange = 1;
+	const int upperRange = 10;
 
+	int tabOfNumbers[size];
+	int tabOfNumbersReverse[size];
 
-tablicaLiczb[i] = rand() % (zakresGorny - zakresDolny + 1) + zakresDolny;
-*/
+	srand(time(NULL));
+	for (int i = 0; i < size; i++)
+	{
+		tabOfNumbers[i] = rand() % (upperRange - lowerRange + 1) + lowerRange;
+	}
+
+	std::cout << "Liczby w tablicy:\n";
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << tabOfNumbers[i] << ", ";
+	}
+	std::cout << "\n";
+	/*
+	for (int i = 0; i < size; i++)
+	{
+		tabOfNumbersReverse[i] = tabOfNumbers[size - i - 1];
+	}
+	*/
+	for (int i = 0, j = size - 1; i < size; i++, j--)
+	{
+		tabOfNumbersReverse[i] = tabOfNumbers[j];
+	}
+
+	std::cout << "Liczby w tablicy odwróconej:\n";
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << tabOfNumbersReverse[i] << ", ";
+	}
+	std::cout << "\n";
+}
+
+//Napisz funkcje, która dla kolekcji danych liczbowych obliczy częstotliwość występowania danej liczby.
+void task7()
+{
+	const int size = 10;
+	const int lowerRange = 0;
+	const int upperRange = 5;
+
+	int tabOfNumbers[size];
+	int tabOfFrequentyNumbers[upperRange - lowerRange + 1];
+
+	srand(time(NULL));
+	for (int i = 0; i < size; i++)
+	{
+		tabOfNumbers[i] = rand() % (upperRange - lowerRange + 1) + lowerRange;
+	}
+
+	std::cout << "Liczby w tablicy:\n";
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << tabOfNumbers[i] << ", ";
+	}
+	std::cout << "\n";
+
+	for (int i = 0; i < upperRange - lowerRange + 1; i++)
+	{
+		tabOfFrequentyNumbers[i] = 0;
+	}
+
+	for (int i = 0; i < size; i++)
+	{
+		tabOfFrequentyNumbers[tabOfNumbers[i] - lowerRange]++;
+	}
+
+	std::cout << "Częstotliwość liczb: \n";
+	for (int i = 0; i < upperRange - lowerRange + 1; i++)
+	{
+		std::cout << "Liczba " << (i + lowerRange) << " wystąpiła " << tabOfFrequentyNumbers[i] << " razy \n";
+	}
+}
+
+//Napisz funkcję, która dla kolekcji danych liczbowych znajdzie najdłuższy rosnący podciąg.
+void task8()
+{
+	const int size = 20;
+	const int lowerRange = 0;
+	const int upperRange = 5;
+
+	int tabOfNumbers[size];
+
+	srand(time(NULL));
+	for (int i = 0; i < size; i++)
+	{
+		tabOfNumbers[i] = rand() % (upperRange - lowerRange + 1) + lowerRange;
+	}
+
+	std::cout << "Liczby w tablicy:\n";
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << tabOfNumbers[i] << ", ";
+	}
+	std::cout << "\n";
+
+	int maxSubsequenceLength = 1;
+	int currentSubsequenceLength = 1;
+	for (int i = 1; i < size; i++)
+	{
+		if (tabOfNumbers[i] >= tabOfNumbers[i - 1])
+			currentSubsequenceLength++;
+		else if (currentSubsequenceLength > maxSubsequenceLength)
+		{
+			maxSubsequenceLength = currentSubsequenceLength;
+			currentSubsequenceLength = 1;
+		}
+		else
+			currentSubsequenceLength = 1;
+	}
+
+	if (currentSubsequenceLength > maxSubsequenceLength)
+		maxSubsequenceLength = currentSubsequenceLength;
+
+	std::cout << "Długość największego rosnącego podciągu to " << maxSubsequenceLength << "\n";
+}
+
+//Napisz funkcję, która dla kolekcji danych liczbowych przeniesie te liczby do osobnych kolekcji liczb parzystych i nieparzystych.
+void task9()
+{
+	const int size = 20;
+	const int lowerRange = 0;
+	const int upperRange = 5;
+
+	int tabOfNumbers[size];
+	int tabOfEventNumbers[size];
+	int tabOfOddNumbers[size];
+	int countEvent = -1;
+	int countOdd = -1;
+
+	srand(time(NULL));
+	for (int i = 0; i < size; i++)
+	{
+		tabOfNumbers[i] = rand() % (upperRange - lowerRange + 1) + lowerRange;
+	}
+
+	std::cout << "Liczby w tablicy:\n";
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << tabOfNumbers[i] << ", ";
+	}
+	std::cout << "\n";
+
+	for (int i = 0; i < size; i++)
+	{
+		if (tabOfNumbers[i] % 2 == 0)
+		{
+			countEvent++;
+			tabOfEventNumbers[countEvent] = tabOfNumbers[i];
+		}
+		else
+		{
+			countOdd++;
+			tabOfOddNumbers[countOdd] = tabOfNumbers[i];
+		}
+	}
+
+	std::cout << "Liczby parzyste:\n";
+	for (int i = 0; i < countEvent; i++)
+	{
+		std::cout << tabOfEventNumbers[i] << ", ";
+	}
+	std::cout << "\n";
+
+	std::cout << "Liczby nieparzyste:\n";
+	for (int i = 0; i < countOdd; i++)
+	{
+		std::cout << tabOfOddNumbers[i] << ", ";
+	}
+}
 
 int main()
 {
-	std::cout << "dfgjdfg" << std::endl << "dfgj\ndfgh" << '\n' << std::endl;
-	task4();
+	setlocale(LC_CTYPE, "polish");
+	//std::cout << "dfgjdfg" << std::endl << "dfgj\ndfgh" << '\n' << std::endl;
+	task8();
 }
