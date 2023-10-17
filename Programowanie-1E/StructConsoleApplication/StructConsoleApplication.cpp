@@ -48,7 +48,7 @@ double calculateDistance(double x, double y)
 	return d;
 }
 
-void GetCoordinates(double &x, double &y)
+void GetCoordinates(double& x, double& y)
 {
 	std::cout << "Podaj X:\n";
 	std::cin >> x;
@@ -73,7 +73,7 @@ void task3()
 
 void task4()
 {
-	const int size = 3;
+	const int size = 5;
 	double x[size], y[size];
 
 	for (int i = 0; i < size; i++)
@@ -93,10 +93,27 @@ void task4()
 	}
 }
 
+//Napisz program, który obliczy odległość punktu w przestrzeni 3D od środka układu współrzędnych.
+void task5()
+{
+	double x, y, z;
+	std::cout << "Podaj X:\n";
+	std::cin >> x;
+	std::cout << "Podaj Y:\n";
+	std::cin >> y;
+	std::cout << "Podaj Z:\n";
+	std::cin >> z;
+
+	double d = sqrt(x * x + y * y + z * z);
+
+	std::cout << "Odległość do punktu (0,0,0) punktu (" << x << ", " << y << ", " << z << ") wynosi " << d << "\n";
+}
+
 int main()
 {
 	//task1();
 	//task2();
 	//task3();
-	task4();
+	//task4();
+	task5();
 }
