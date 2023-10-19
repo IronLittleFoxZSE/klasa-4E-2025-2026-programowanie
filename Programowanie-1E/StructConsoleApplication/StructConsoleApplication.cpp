@@ -78,7 +78,7 @@ void task4()
 
 	for (int i = 0; i < size; i++)
 	{
-		GetCoordinates(x[i], y[i]);
+		GetCoordinates(y[i], x[i]);
 	}
 
 	double d[size];
@@ -93,20 +93,25 @@ void task4()
 	}
 }
 
-//Napisz program, który obliczy odległość punktu w przestrzeni 3D od środka układu współrzędnych.
+struct point
+{
+	std::string opisPunktu;
+	double x;
+	double y;
+};
+
+//Napisz program, który obliczy odległość punktu w przestrzeni 2D od środka układu współrzędnych.
 void task5()
 {
-	double x, y, z;
+	point ourPoint;
 	std::cout << "Podaj X:\n";
-	std::cin >> x;
+	std::cin >> ourPoint.x;
 	std::cout << "Podaj Y:\n";
-	std::cin >> y;
-	std::cout << "Podaj Z:\n";
-	std::cin >> z;
+	std::cin >> ourPoint.y;
 
-	double d = sqrt(x * x + y * y + z * z);
+	double d = sqrt(ourPoint.x * ourPoint.x + ourPoint.y * ourPoint.y);
 
-	std::cout << "Odległość do punktu (0,0,0) punktu (" << x << ", " << y << ", " << z << ") wynosi " << d << "\n";
+	std::cout << "Odległość do punktu (0,0) punktu (" << ourPoint.x << ", " << ourPoint.y << ") wynosi " << d << "\n";
 }
 
 int main()
