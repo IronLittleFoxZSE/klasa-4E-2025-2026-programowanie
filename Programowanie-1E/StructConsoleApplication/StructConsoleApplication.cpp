@@ -1,6 +1,13 @@
 ﻿#include <iostream>
 //#include <cmath>
 
+struct point
+{
+	std::string opisPunktu;
+	double x;
+	double y;
+};
+
 //Napisz program, który obliczy odległość punktu w przestrzeni 2D od środka układu współrzędnych.
 void task1()
 {
@@ -56,6 +63,14 @@ void GetCoordinates(double& x, double& y)
 	std::cin >> y;
 }
 
+void GetCoordinates(point& p)
+{
+	std::cout << "Podaj X:\n";
+	std::cin >> p.x;
+	std::cout << "Podaj Y:\n";
+	std::cin >> p.y;
+}
+
 void task3()
 {
 	double x = 0, y = 0;
@@ -93,13 +108,6 @@ void task4()
 	}
 }
 
-struct point
-{
-	std::string opisPunktu;
-	double x;
-	double y;
-};
-
 //Napisz program, który obliczy odległość punktu w przestrzeni 2D od środka układu współrzędnych.
 void task5()
 {
@@ -112,6 +120,17 @@ void task5()
 	double d = sqrt(ourPoint.x * ourPoint.x + ourPoint.y * ourPoint.y);
 
 	std::cout << "Odległość do punktu (0,0) punktu (" << ourPoint.x << ", " << ourPoint.y << ") wynosi " << d << "\n";
+}
+
+void task6()
+{
+	point ourPoint;
+
+	GetCoordinates(ourPoint);
+
+	double d = calculateDistance(ourPoint.x, ourPoint.y);
+
+	displayAnswer(ourPoint.x, ourPoint.y, d);
 }
 
 int main()
