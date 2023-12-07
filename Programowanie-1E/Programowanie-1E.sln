@@ -41,6 +41,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08. Gra Kółko i krzyżyk"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TicTacToeConsoleApplication", "TicTacToeConsoleApplication\TicTacToeConsoleApplication.vcxproj", "{6A2B50C2-1D8A-42B6-9D82-7B77B2497B48}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "09. Biblioteka", "09. Biblioteka", "{561DD7E5-930B-49AA-9ADC-5A5E8DD1C569}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibraryConsoleApplication", "LibraryConsoleApplication\LibraryConsoleApplication.vcxproj", "{E6D27C01-555A-4D60-B5B7-148A4DB5B06D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -137,6 +141,14 @@ Global
 		{6A2B50C2-1D8A-42B6-9D82-7B77B2497B48}.Release|x64.Build.0 = Release|x64
 		{6A2B50C2-1D8A-42B6-9D82-7B77B2497B48}.Release|x86.ActiveCfg = Release|Win32
 		{6A2B50C2-1D8A-42B6-9D82-7B77B2497B48}.Release|x86.Build.0 = Release|Win32
+		{E6D27C01-555A-4D60-B5B7-148A4DB5B06D}.Debug|x64.ActiveCfg = Debug|x64
+		{E6D27C01-555A-4D60-B5B7-148A4DB5B06D}.Debug|x64.Build.0 = Debug|x64
+		{E6D27C01-555A-4D60-B5B7-148A4DB5B06D}.Debug|x86.ActiveCfg = Debug|Win32
+		{E6D27C01-555A-4D60-B5B7-148A4DB5B06D}.Debug|x86.Build.0 = Debug|Win32
+		{E6D27C01-555A-4D60-B5B7-148A4DB5B06D}.Release|x64.ActiveCfg = Release|x64
+		{E6D27C01-555A-4D60-B5B7-148A4DB5B06D}.Release|x64.Build.0 = Release|x64
+		{E6D27C01-555A-4D60-B5B7-148A4DB5B06D}.Release|x86.ActiveCfg = Release|Win32
+		{E6D27C01-555A-4D60-B5B7-148A4DB5B06D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -153,6 +165,7 @@ Global
 		{DA7DAFCA-DC5A-408E-A925-E2F369BD15CB} = {D2771981-C98B-48A1-9ABA-855FDFDC52CE}
 		{AC22D7F3-4C86-41EC-AC04-D035F5723C3C} = {F0668280-C3C2-4EC5-8570-1E88D5B7DE99}
 		{6A2B50C2-1D8A-42B6-9D82-7B77B2497B48} = {55D30ADD-C09A-408F-9E62-7C1C9BEF1735}
+		{E6D27C01-555A-4D60-B5B7-148A4DB5B06D} = {561DD7E5-930B-49AA-9ADC-5A5E8DD1C569}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {77A83098-39B9-4A8F-A584-1CBAB34C0F7D}
