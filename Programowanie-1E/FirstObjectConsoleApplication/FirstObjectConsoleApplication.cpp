@@ -1,8 +1,8 @@
 ﻿#include <iostream>
 
-class person
+class Person
 {
-public:
+private:
 	std::string name;
 	//std::string secondName;
 	std::string surname;
@@ -10,7 +10,8 @@ public:
 	short age;
 	//char sex; //'M' - male; 'F' - female
 
-	void showInfo()
+public:
+	void ShowInfo()
 	{
 		std::cout << "Info o osobie:\n";
 		std::cout << "Imię: " << name << "\n";
@@ -18,7 +19,7 @@ public:
 		std::cout << "Wiek: " << age << "\n";
 	}
 
-	bool isLegalAge()
+	bool IsLegalAge()
 	{
 		return age >= 18;
 	}
@@ -26,22 +27,22 @@ public:
 
 int main()
 {
-	person firstPerson;
+	Person firstPerson;
 	firstPerson.name = "Jan";
 	firstPerson.surname = "Kowalski";
-	firstPerson.age = 5;
+	firstPerson.age = 5000;	
 
-	firstPerson.showInfo();
+	firstPerson.ShowInfo();
 
-	if (firstPerson.isLegalAge())
+	if (firstPerson.IsLegalAge())
 		std::cout << "Jesteś pełnoletni\n";
 
-	person secondPerson;
+	Person secondPerson;
 	secondPerson.name = "Paweł";
 	secondPerson.surname = "Nowak";
 	secondPerson.age = 49;
 
-	secondPerson.showInfo();
-	if (secondPerson.isLegalAge())
+	secondPerson.ShowInfo();
+	if (secondPerson.IsLegalAge())
 		std::cout << "Jesteś pełnoletni\n";
 }
