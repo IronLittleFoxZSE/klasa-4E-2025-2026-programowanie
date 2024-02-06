@@ -11,6 +11,20 @@ private:
 	//char sex; //'M' - male; 'F' - female
 
 public:
+	Person()
+	{
+		name = "Jan";
+		surname = "Kowalski";
+		age = 25;
+	}
+
+	Person(std::string n, std::string s, short a)
+	{
+		name = n;
+		surname = s;
+		age = a;
+	}
+
 	void ShowInfo()
 	{
 		std::cout << "Info o osobie:\n";
@@ -40,19 +54,21 @@ public:
 
 int main()
 {
+	setlocale(LC_CTYPE, "polish");
+
 	Person firstPerson;
 	//firstPerson.name = "Jan";
 	//firstPerson.surname = "Kowalski";
-	//firstPerson.age = 5000;
-	firstPerson.SetAge(500);
-	std::cout << "Wiek: " << firstPerson.GetAge() << "\n";
+	//firstPerson.age = 50;
+	//firstPerson.SetAge(50);
+	//std::cout << "Wiek: " << firstPerson.GetAge() << "\n";
 
 	firstPerson.ShowInfo();
 
 	if (firstPerson.IsLegalAge())
 		std::cout << "Jesteś pełnoletni\n";
 
-	Person secondPerson;
+	Person secondPerson("Paweł", "Nowak", 49);
 	//secondPerson.name = "Paweł";
 	//secondPerson.surname = "Nowak";
 	//secondPerson.age = 49;
