@@ -23,14 +23,29 @@ public:
 	{
 		return age >= 18;
 	}
+
+	void SetAge(short a)
+	{
+		if (a > 0 && a < 130)
+			age = a;
+		else
+			std::cout << "Błędna wartość\n";
+	}
+
+	short GetAge()
+	{
+		return age;
+	}
 };
 
 int main()
 {
 	Person firstPerson;
-	firstPerson.name = "Jan";
-	firstPerson.surname = "Kowalski";
-	firstPerson.age = 5000;	
+	//firstPerson.name = "Jan";
+	//firstPerson.surname = "Kowalski";
+	//firstPerson.age = 5000;
+	firstPerson.SetAge(500);
+	std::cout << "Wiek: " << firstPerson.GetAge() << "\n";
 
 	firstPerson.ShowInfo();
 
@@ -38,11 +53,12 @@ int main()
 		std::cout << "Jesteś pełnoletni\n";
 
 	Person secondPerson;
-	secondPerson.name = "Paweł";
-	secondPerson.surname = "Nowak";
-	secondPerson.age = 49;
+	//secondPerson.name = "Paweł";
+	//secondPerson.surname = "Nowak";
+	//secondPerson.age = 49;
 
 	secondPerson.ShowInfo();
 	if (secondPerson.IsLegalAge())
 		std::cout << "Jesteś pełnoletni\n";
 }
+
