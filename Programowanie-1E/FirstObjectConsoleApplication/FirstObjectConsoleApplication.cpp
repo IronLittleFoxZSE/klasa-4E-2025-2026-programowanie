@@ -24,6 +24,11 @@ public:
 		surname = s;
 		age = a;
 	}
+	
+	~Person()
+	{
+		std::cout << "Teraz działa destruktor: imię " << name << "\n";
+	}
 
 	void ShowInfo()
 	{
