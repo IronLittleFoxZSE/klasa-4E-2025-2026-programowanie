@@ -14,6 +14,17 @@ Napisz program który zaprezentuje możliwości obiektu na podstawie tej klasy.
 
 */
 
+/*
+Zdefiniuj klase opisujące konto bankowe. Możliwości klasy:
+* konstruktory
+* metoda która dokona wpłaty na konto
+* metoda która wypłaty z konta
+* metoda która wykona przelew na inne konto
+* metodę która pokaże informacje o koncie.
+
+Napisz program który zaprezentuje możliwości obiektu na podstawie tej klasy.
+*/
+
 class Point2D
 {
 private:
