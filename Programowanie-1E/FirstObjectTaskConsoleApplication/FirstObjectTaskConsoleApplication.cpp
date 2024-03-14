@@ -25,6 +25,17 @@ Zdefiniuj klase opisujące konto bankowe. Możliwości klasy:
 Napisz program który zaprezentuje możliwości obiektu na podstawie tej klasy.
 */
 
+/*
+ZADANIE
+Zdefiniuj klase opisującą prostokąt. Możliwości klasy:
+* konstruktory
+* metoda która zwórci obwód prostokąta
+* metoda która pole prostokąta
+* metodę która pokaże informacje o prostokącie.
+
+Napisz program który zaprezentuje możliwości obiektu na podstawie tej klasy.
+*/
+
 class Point2D
 {
 private:
