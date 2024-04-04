@@ -6,36 +6,46 @@ class C
 {
 protected:
 	int number;
+	std::string name;
 public:
-
-};
-
-class A: public C
-{
-private:
-    //int number;
-	bool isEmpty;
-public:
-	A()
+	C()
 	{
-		number = 5;
-		isEmpty = false;
+
 	}
 
 	int GetNumber()
 	{
 		return number;
 	}
+};
+
+class A : public C
+{
+private:
+	//int number;
+	bool isEmpty;
+public:
+	A()
+	{
+		number = 5;
+		isEmpty = false;
+		name = "A";
+	}
+
+	/*int GetNumber()
+	{
+		return number;
+	}*/
 
 	void ShowInfo()
 	{
-		std::cout << "Informacja o obiekcie A\n";
+		std::cout << "Informacja o obiekcie " << name << "\n";
 		std::cout << "Number = " << number << "\n";
 		std::cout << "IsEmpty = " << isEmpty << "\n";
 	}
 };
 
-class B: public C
+class B : public C
 {
 private:
 	//int number;
@@ -43,18 +53,19 @@ private:
 public:
 	B()
 	{
-		number = 10;
+		number = 5;
 		text = "Ala ma kota";
+		name = "B";
 	}
 
-	int GetNumber()
+	/*int GetNumber()
 	{
 		return number;
-	}
+	}*/
 
 	void ShowInfo()
 	{
-		std::cout << "Informacja o obiekcie B\n";
+		std::cout << "Informacja o obiekcie " << name << "\n";
 		std::cout << "Number = " << number << "\n";
 		std::cout << "Text = " << text << "\n";
 	}
@@ -63,8 +74,11 @@ public:
 int main()
 {
 	A a;
-	a.ShowInfo();
+	//a.ShowInfo();
 
 	B b;
-	b.ShowInfo();
+	//b.ShowInfo();
+
+	C c;
+	//c.
 }
