@@ -10,12 +10,25 @@ protected:
 public:
 	C()
 	{
+		number = 5;
+		name = "C";
+	}
 
+	C(std::string n)
+	{
+		number = 5;
+		name = n;
 	}
 
 	int GetNumber()
 	{
 		return number;
+	}
+
+	void ShowInfo()
+	{
+		std::cout << "Informacja o obiekcie " << name << "\n";
+		std::cout << "Number = " << number << "\n";
 	}
 };
 
@@ -25,11 +38,11 @@ private:
 	//int number;
 	bool isEmpty;
 public:
-	A()
+	A() : C("A")
 	{
-		number = 5;
+		//number = 5;
 		isEmpty = false;
-		name = "A";
+		//name = "A";
 	}
 
 	/*int GetNumber()
@@ -51,11 +64,11 @@ private:
 	//int number;
 	std::string text;
 public:
-	B()
+	B() : C("B")
 	{
-		number = 5;
+		//number = 5;
 		text = "Ala ma kota";
-		name = "B";
+		//name = "B";
 	}
 
 	/*int GetNumber()
