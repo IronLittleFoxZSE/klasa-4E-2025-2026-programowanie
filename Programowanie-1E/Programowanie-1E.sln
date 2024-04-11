@@ -59,6 +59,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Dziedziczenie", "02. Dz
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InheritanceConsoleApplication", "InheritanceConsoleApplication\InheritanceConsoleApplication.vcxproj", "{05F7D8D1-0281-4A90-9CE2-7BE19D1235C3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeometryConsoleApplication", "GeometryConsoleApplication\GeometryConsoleApplication.vcxproj", "{2668CE7D-0002-4F77-9EA9-46DF20F0C5B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -187,6 +189,14 @@ Global
 		{05F7D8D1-0281-4A90-9CE2-7BE19D1235C3}.Release|x64.Build.0 = Release|x64
 		{05F7D8D1-0281-4A90-9CE2-7BE19D1235C3}.Release|x86.ActiveCfg = Release|Win32
 		{05F7D8D1-0281-4A90-9CE2-7BE19D1235C3}.Release|x86.Build.0 = Release|Win32
+		{2668CE7D-0002-4F77-9EA9-46DF20F0C5B2}.Debug|x64.ActiveCfg = Debug|x64
+		{2668CE7D-0002-4F77-9EA9-46DF20F0C5B2}.Debug|x64.Build.0 = Debug|x64
+		{2668CE7D-0002-4F77-9EA9-46DF20F0C5B2}.Debug|x86.ActiveCfg = Debug|Win32
+		{2668CE7D-0002-4F77-9EA9-46DF20F0C5B2}.Debug|x86.Build.0 = Debug|Win32
+		{2668CE7D-0002-4F77-9EA9-46DF20F0C5B2}.Release|x64.ActiveCfg = Release|x64
+		{2668CE7D-0002-4F77-9EA9-46DF20F0C5B2}.Release|x64.Build.0 = Release|x64
+		{2668CE7D-0002-4F77-9EA9-46DF20F0C5B2}.Release|x86.ActiveCfg = Release|Win32
+		{2668CE7D-0002-4F77-9EA9-46DF20F0C5B2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -218,6 +228,7 @@ Global
 		{E42302C5-B14F-4E4E-BE94-B88FE10E1FF7} = {33527070-54FD-4D0E-898C-7E7025DCE327}
 		{278380E7-6172-49B1-B059-014D87035023} = {363762B0-C6FB-40E5-A203-70C62695AA5B}
 		{05F7D8D1-0281-4A90-9CE2-7BE19D1235C3} = {278380E7-6172-49B1-B059-014D87035023}
+		{2668CE7D-0002-4F77-9EA9-46DF20F0C5B2} = {278380E7-6172-49B1-B059-014D87035023}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {77A83098-39B9-4A8F-A584-1CBAB34C0F7D}
