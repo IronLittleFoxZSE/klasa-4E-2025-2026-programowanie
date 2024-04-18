@@ -22,28 +22,19 @@ public:
 	}
 };
 
-class Square : public Quadrangle
-{
-protected:
-
-public:
-	Square(double a) :Quadrangle(a, a, a, a)
-	{
-
-	}
-};
-
 class Trapeze : public Quadrangle
 {
 protected:
-
+	double height;
 public:
-	Trapeze(double a, double b, double c, double d) :Quadrangle(a, b, c, d)
+	Trapeze(double a, double b, double c, double d, double h) :Quadrangle(a, b, c, d)
 	{
-		/*sideA = a;
-		sideB = b;
-		sideC = c;
-		sideD = d;*/
+		height = h;
+	}
+
+	double GetArea()
+	{
+		return (sideA + sideC) * height / 2;
 	}
 };
 
@@ -66,14 +57,28 @@ public:
 	}
 };
 
+class Square : public Rectangle
+{
+protected:
+
+public:
+	Square(double a) :Rectangle(a, a)
+	{
+
+	}
+};
+
 int main()
 {
 	Rectangle r(1, 2);
 	std::cout << "Obwód prostokąta: " << r.GetPerimeter() << "\n";
+	std::cout << "Pole prostokąta: " << r.GetArea() << "\n";
 
-	Trapeze t(1, 2, 3, 4);
+	Trapeze t(1, 2, 3, 4, 5);
 	std::cout << "Obwód trapezu: " << t.GetPerimeter() << "\n";
+	std::cout << "Pole trapezu: " << t.GetArea() << "\n";
 
 	Square s(5);
 	std::cout << "Obwód kwadratu: " << s.GetPerimeter() << "\n";
+	std::cout << "Pole kwadratu: " << s.GetArea() << "\n";
 }
