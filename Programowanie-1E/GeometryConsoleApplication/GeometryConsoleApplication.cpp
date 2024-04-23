@@ -3,9 +3,21 @@
 
 /*
 * Dla poniższych klas ułóż drzewko dziedziczenia.
-- Tiger (Tygrys), Dog (Pies), Fish (Ryba), Eagle (Orzeł), Mammal (Ssak), Lion (Lew), Sparrow (Wróbel), Reptile (Gad), Trout (Pstrąg), Cat (Kot), Salmon (Łosoś), Animal (Zwierzę), Snake (Wąż), Bird (Ptak), Turtle (Żółw)
-- SUV (SUV), Pickup Truck (Pick-up), Truck (Ciężarówka), Car (Samochód), Sedan (Sedan), Motorcycle (Motocykl), Vehicle (Pojazd), Semi-Truck (Ciągnik siodłowy)
-- Smartphone (Smartfon), Android Phone (Telefon z systemem Android), Electronic Device (Urządzenie elektroniczne), LED TV (Telewizor LED), Laptop (Laptop), iPhone (iPhone), Television (Telewizor), Smart TV (Telewizor Smart)
+																	Animal (Zwierzę)
+		Mammal (Ssak)									Reptile (Gad)					Fish (Ryba)								Bird (Ptak)
+Dog (Pies)			Cat (Kot)					Snake (Wąż)		Turtle (Żółw)		Trout (Pstrąg)  Salmon (Łosoś)		Eagle (Orzeł)  Sparrow (Wróbel)
+			Tiger (Tygrys)  Lion (Lew)
+
+															Vehicle (Pojazd)
+		Car (Samochód)										Truck (Ciężarówka)						Motorcycle (Motocykl)
+Sedan (Sedan)	SUV (SUV)	Pickup Truck (Pick-up)			Semi-Truck (Ciągnik siodłowy)
+
+
+
+																		Electronic Device (Urządzenie elektroniczne)
+				Television (Telewizor)														Smartphone (Smartfon)				Laptop (Laptop)
+Smart TV (Telewizor Smart)	LED TV (Telewizor LED)		Android Phone (Telefon z systemem Android)	iPhone (iPhone)
+
 
 */
 
