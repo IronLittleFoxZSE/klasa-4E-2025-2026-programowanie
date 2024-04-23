@@ -1,6 +1,15 @@
 ﻿// GeometryConsoleApplication.cpp 
 #include <iostream>
 
+/*
+* Dla poniższych klas ułóż drzewko dziedziczenia.
+- Tiger (Tygrys), Dog (Pies), Fish (Ryba), Eagle (Orzeł), Mammal (Ssak), Lion (Lew), Sparrow (Wróbel), Reptile (Gad), Trout (Pstrąg), Cat (Kot), Salmon (Łosoś), Animal (Zwierzę), Snake (Wąż), Bird (Ptak), Turtle (Żółw)
+- SUV (SUV), Pickup Truck (Pick-up), Truck (Ciężarówka), Car (Samochód), Sedan (Sedan), Motorcycle (Motocykl), Vehicle (Pojazd), Semi-Truck (Ciągnik siodłowy)
+- Smartphone (Smartfon), Android Phone (Telefon z systemem Android), Electronic Device (Urządzenie elektroniczne), LED TV (Telewizor LED), Laptop (Laptop), iPhone (iPhone), Television (Telewizor), Smart TV (Telewizor Smart)
+
+*/
+
+
 //Kwadrat, trapez, prostokąt
 
 class Quadrangle //ang. czworokąt
