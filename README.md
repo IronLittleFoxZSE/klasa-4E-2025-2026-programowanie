@@ -63,8 +63,38 @@ https://cpp0x.pl/dokumentacja/standard-C/Data-i-czas/13
 Kartkówka
 Komputer 1, 3, 5, 7, 9, 11, 13, 15, 17
 
-https://forms.office.com/e/n06Ef6MHL8
+
 
 Komputer 2, 4, 6, 8, 10, 12, 14, 16
 
-https://forms.office.com/e/nx90ekfFEH
+
+#include <windows.h>
+#include <conio.h>
+
+void setCursor(int x, int y)
+{
+	COORD c;
+	c.X = x;
+	c.Y = y;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
+}
+
+void showConsoleCursor(bool showFlag)
+{
+	HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	CONSOLE_CURSOR_INFO     cursorInfo;
+
+	GetConsoleCursorInfo(out, &cursorInfo);
+	cursorInfo.bVisible = showFlag; // set the cursor visibility
+	SetConsoleCursorInfo(out, &cursorInfo);
+}
+
+void getConsolResolution(int& consoleWidth, int& consoleHeight)
+{
+	CONSOLE_SCREEN_BUFFER_INFO csbi;
+	GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
+
+	consoleWidth = csbi.srWindow.Right - csbi.srWindow.Left;
+	consoleHeight = csbi.srWindow.Bottom - csbi.srWindow.Top;
+}
