@@ -44,14 +44,16 @@ void passingParameters_v3(out int p)    //przekazywanie przez referencję
 }
 
 
-string strNumber = "125";
+string strNumber = "125d";
 //strNumber = Console.ReadLine();
 int firstNumber;
 
 //firstNumber = int.Parse(strNumber);
 
-if (int.TryParse(strNumber,) == false)
+if (int.TryParse(strNumber, out firstNumber) == false)
 {
-
+    Console.WriteLine( "Kominikat o błędzie");
 }
+
+Console.WriteLine($"Po konwersji {firstNumber}");
 
