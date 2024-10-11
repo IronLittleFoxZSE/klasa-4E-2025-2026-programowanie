@@ -12,45 +12,18 @@ secondAccount.balance = 20;
 secondAccount.currency = "zł";
 secondAccount.owner = "Ewa Nowak";
 
-showInfo(firstAccount);
-showInfo(secondAccount);
+firstAccount.ShowInfo();
+//showInfo(firstAccount);
+secondAccount.ShowInfo();
+//showInfo(secondAccount);
 
-depositToAccount(ref firstAccount, -5);
-showInfo(firstAccount);
+firstAccount.DepositToAccount(5);
+firstAccount.ShowInfo();
 
-widthdrawalFromAccount(ref secondAccount, 25);
-showInfo(secondAccount);
+secondAccount.WidthdrawalFromAccount(25);
+secondAccount.ShowInfo();
 
-transferBetweenAccounts(ref firstAccount, ref secondAccount, 300);
-showInfo(firstAccount);
-showInfo(secondAccount);
+firstAccount.TransferBetweenAccounts(ref secondAccount, 300);
+firstAccount.ShowInfo();
+secondAccount.ShowInfo();
 
-void showInfo(BankAccount account)
-{
-    Console.WriteLine("Informacja o koncie bankowym");
-    Console.WriteLine($"Właściciel {account.owner}");
-    Console.WriteLine($"Saldo {account.balance} {account.currency}");
-}
-
-void depositToAccount(ref BankAccount account, double amount)
-{
-    if (amount >= 0)
-        account.balance = account.balance + amount;
-}
-
-bool widthdrawalFromAccount(ref BankAccount account, double amount)
-{
-    if (amount >= 0
-        && amount <= account.balance)
-    {
-        account.balance = account.balance - amount;
-        return true;
-    }
-    return false;
-}
-
-void transferBetweenAccounts(ref BankAccount sourceAccount, ref BankAccount targetAccount, double amount)
-{
-    if (widthdrawalFromAccount(ref sourceAccount, amount) == true)
-        depositToAccount(ref targetAccount, amount);
-}
