@@ -21,9 +21,13 @@ streamWriter.Close();
 
 StreamReader streamReader = new StreamReader("c:\\plik3E.txt");
 
-name = streamReader.ReadLine();
-age = int.Parse(streamReader.ReadLine());
+while (true)
+{
+    name = streamReader.ReadLine();
+    if (name == null)
+        break;
+    age = int.Parse(streamReader.ReadLine());
 
-Console.WriteLine($"Odczytano z pliku {name} {age}");
-
+    Console.WriteLine($"Odczytano z pliku {name} {age}");
+}
 streamReader.Close();
