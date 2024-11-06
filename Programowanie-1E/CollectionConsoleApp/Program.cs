@@ -9,7 +9,6 @@
 //int x = tab[4];
 
 //c#
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 int[] tab;
 tab = new int[10];
@@ -176,7 +175,7 @@ void ShowCollection(string message, List<int> collection)
     }
 }
 
-void FilterCollection(List<int> sourceCollection, List<int> destinationCollection, Func<int,bool> func)
+void FilterCollection(List<int> sourceCollection, List<int> destinationCollection, Func<int, bool> func)
 {
     foreach (int number in sourceCollection)
     {
@@ -215,14 +214,50 @@ action();
 
 //Action<string> secondAction;
 secondAction = ShowMessaage;
-secondAction = (string message) => { Console.WriteLine(message);  }; 
-secondAction = (message) => { Console.WriteLine(message);  }; 
-secondAction = message => { Console.WriteLine(message);  }; 
+secondAction = (string message) => { Console.WriteLine(message); };
+secondAction = (message) => { Console.WriteLine(message); };
+secondAction = message => { Console.WriteLine(message); };
 
+
+/*
+bool IsFrom5To19(int n)
+{
+    return n > 5 && n < 19;
+}
+*/
 
 Func<int, bool> thirdFunc;
 thirdFunc = IsFrom5To19;
-thirdFunc = 
+thirdFunc = (int n) => { return n > 5 && n < 19; };
+thirdFunc = (n) => { return n > 5 && n < 19; };
+thirdFunc = n => { return n > 5 && n < 19; };
+thirdFunc = n => n > 5 && n < 19;
 
 List<int> numbers = new List<int>();
 FilterCollection(numbersCollection, numbers, IsFrom5To19);
+FilterCollection(numbersCollection, numbers, n => n > 5 && n < 19);
+FilterCollection(numbersCollection, numbers, n => n % 2 == 0);
+FilterCollection(numbersCollection, numbers, n => n > 59);
+FilterCollection(numbersCollection, numbers, thirdFunc);
+
+/*
+create table  numbersCollection (number int);
+
+ select * from numbersCollection where func(number)
+*/
+
+numbers = numbersCollection.Where(n => n % 2 == 0).ToList();
+
+/*
+
+select imie , count (*)
+from uczniowie
+where imie like "R%"
+group by imie
+having count (*) > 5
+order by 2
+
+CRUD
+
+*/
+
