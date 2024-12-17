@@ -166,6 +166,8 @@ bool isTrue = tasks.All(t => t.Name.ToLower().Where(c => "aeiouy".Contains(c)).D
 Console.WriteLine(isTrue);
 
 //Zadanie 16: Znajdź wszystkie unikalne litery używane w nazwach zadań zakończonych
+var w = tasks.Where(t => t.IsCompleted).SelectMany(t => t.Name.ToLower().Where(c => char.IsLetter(c))).Distinct();
+
 
 class TaskName
 {
