@@ -46,29 +46,39 @@ Console.WriteLine($"Zadanie 4.1: {counter} {firtFindNumber}");
 //zadanie 4.2
 int maxNumber = 1;
 int maxNumberCounter = 0;
+
+int maxDifferentNumber = 1;
+int maxDifferentCount = 0;
 foreach (string strNumber in strNumbersFromFile)
 {
     int number = Convert.ToInt32(strNumber);
 
     //Console.WriteLine($"Rozkład liczby {number}:");
     int divisor = 2;
-    int couter = 0;
+    List<int> primeFactors = new List<int>();
     while(number != 1)
     {
         if (number % divisor == 0)
         {
             number = number / divisor;
             //Console.Write($"{divisor} ");
-            couter++;
+            primeFactors.Add(divisor);
         }
         else
             divisor++;
     }
-    if (couter > maxNumberCounter)
+    if (primeFactors.Count() > maxNumberCounter)
     {
-        maxNumberCounter = couter;
+        maxNumberCounter = primeFactors.Count();
         maxNumber = Convert.ToInt32(strNumber);
+    }
+
+    if (primeFactors.Distinct().Count() > maxDifferentCount)
+    {
+        maxDifferentCount = primeFactors.Distinct().Count();
+        maxDifferentNumber = Convert.ToInt32(strNumber);
     }
     //Console.WriteLine();
 }
 Console.WriteLine($"Liczba z znajwiększą ilością czynników pierwszych: {maxNumber} {maxNumberCounter}");
+Console.WriteLine($"Liczba z znajwiększą różną ilością czynników pierwszych: {maxDifferentNumber} {maxDifferentCount}");
