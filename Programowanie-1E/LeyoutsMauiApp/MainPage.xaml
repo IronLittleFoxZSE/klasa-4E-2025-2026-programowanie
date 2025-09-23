@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LeyoutsMauiApp.MainPage"
+             Background="Bisque"
+             Title="Układy">
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Label w StackLayout"
+                   Background="Red"/>
+            <Button Text="Przykładowy"
+                    HorizontalOptions="Start"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Inny label"
+                       Background="Brown"
+                       FontSize="50"/>
+                <Button Text="Przycisk"/>
+            </StackLayout>
+            
+            <Label Text="Kolejny label"
+                   BackgroundColor="Beige"
+                   FontSize="30"/>
+
+            <FlexLayout FlowDirection="LeftToRight"
+                        Direction="Row"
+                        Wrap="Wrap">
+                <Button Text="1"/>
+                <Button Text="2"/>
+                <Label Text="Flex"
+                       Background="Beige"/>
+                <Button Text="3"/>
+            </FlexLayout>
+
+            <Grid ColumnDefinitions="50,70,*, 40, 2*, auto"
+                  RowDefinitions="60, 50"
+                  BackgroundColor="Chocolate">
+                <Button Text="1"/>
+                <Button Text="2"
+                        Grid.Row="1"/>
+                <Button Text="3333"
+                        Grid.Row="1"
+                        Grid.Column="5"/>
+                <Button Text="4"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Grid.ColumnSpan="2"/>
+                <StackLayout Grid.Column="3">
+                    <Label Text="1"/>
+                    <Label Text="2"/>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

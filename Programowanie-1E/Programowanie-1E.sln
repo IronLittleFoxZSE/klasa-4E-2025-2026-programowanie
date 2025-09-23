@@ -101,6 +101,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventVsBindingMauiApp", "Ev
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBindingCalculatorMauiApp", "SimpleBindingCalculatorMauiApp\SimpleBindingCalculatorMauiApp.csproj", "{D9508438-AE70-4EAD-B142-C94339A6E5B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeyoutsMauiApp", "LeyoutsMauiApp\LeyoutsMauiApp.csproj", "{33EAEC39-C43C-4226-AB8E-9D484A5DACE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -487,6 +489,19 @@ Global
 		{D9508438-AE70-4EAD-B142-C94339A6E5B9}.Release|x64.Build.0 = Release|Any CPU
 		{D9508438-AE70-4EAD-B142-C94339A6E5B9}.Release|x86.ActiveCfg = Release|Any CPU
 		{D9508438-AE70-4EAD-B142-C94339A6E5B9}.Release|x86.Build.0 = Release|Any CPU
+		{33EAEC39-C43C-4226-AB8E-9D484A5DACE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33EAEC39-C43C-4226-AB8E-9D484A5DACE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33EAEC39-C43C-4226-AB8E-9D484A5DACE4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{33EAEC39-C43C-4226-AB8E-9D484A5DACE4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{33EAEC39-C43C-4226-AB8E-9D484A5DACE4}.Debug|x64.Build.0 = Debug|Any CPU
+		{33EAEC39-C43C-4226-AB8E-9D484A5DACE4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{33EAEC39-C43C-4226-AB8E-9D484A5DACE4}.Debug|x86.Build.0 = Debug|Any CPU
+		{33EAEC39-C43C-4226-AB8E-9D484A5DACE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33EAEC39-C43C-4226-AB8E-9D484A5DACE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33EAEC39-C43C-4226-AB8E-9D484A5DACE4}.Release|x64.ActiveCfg = Release|Any CPU
+		{33EAEC39-C43C-4226-AB8E-9D484A5DACE4}.Release|x64.Build.0 = Release|Any CPU
+		{33EAEC39-C43C-4226-AB8E-9D484A5DACE4}.Release|x86.ActiveCfg = Release|Any CPU
+		{33EAEC39-C43C-4226-AB8E-9D484A5DACE4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -536,6 +551,7 @@ Global
 		{22145B43-7F81-4801-A605-E5DD7B15DC8F} = {EF63D480-892F-4704-8A7A-A5D61F7EB050}
 		{624DF962-E928-4CA5-B055-C371D80D2F39} = {EF63D480-892F-4704-8A7A-A5D61F7EB050}
 		{D9508438-AE70-4EAD-B142-C94339A6E5B9} = {EF63D480-892F-4704-8A7A-A5D61F7EB050}
+		{33EAEC39-C43C-4226-AB8E-9D484A5DACE4} = {EF63D480-892F-4704-8A7A-A5D61F7EB050}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {77A83098-39B9-4A8F-A584-1CBAB34C0F7D}
