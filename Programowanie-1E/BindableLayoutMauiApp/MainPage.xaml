@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BindableLayoutMauiApp.MainPage"
+             x:Name="thisPage"
+             BindingContext="{x:Reference thisPage}"
+             xmlns:converters="clr-namespace:BindableLayoutMauiApp.Converters">
+    <ContentPage.Resources>
+        <converters:BoolToColorConverter x:Key="BoolToColorConverter" />
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout>
+            <CollectionView ItemsSource="{Binding ToDoTasks}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Title}"
+                                   TextColor="{Binding IsComplited, Converter={x:StaticResource BoolToColorConverter}}" />
+                            <CheckBox IsChecked="{Binding IsComplited}" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="Dodaj zadanie" />
+            <Entry Text="{Binding NewTitle}" />
+            <Button Text="Dodaj zadanie"
+                    Clicked="Button_Clicked" />
+
+            <Grid ColumnDefinitions="*,*"
+                  RowDefinitions="*,*"
+                  BindableLayout.ItemsSource="{Binding ToDoTasks}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal"
+                                     Grid.Column="{Binding Column}"
+                                     Grid.Row="{Binding Row}">
+                            <Label Text="{Binding Title}"
+                                   TextColor="{Binding IsComplited, Converter={x:StaticResource BoolToColorConverter}}" />
+                            <CheckBox IsChecked="{Binding IsComplited}" />
+                        </StackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -107,6 +107,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlsMauiApp", "Controls
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertersMauiApp", "ConvertersMauiApp\ConvertersMauiApp.csproj", "{BFDF10B2-B445-4293-BBF1-A28D740C693D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindableLayoutMauiApp", "BindableLayoutMauiApp\BindableLayoutMauiApp.csproj", "{BBB8F23D-D5A4-44F7-9F48-8F040002AB35}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -532,6 +534,19 @@ Global
 		{BFDF10B2-B445-4293-BBF1-A28D740C693D}.Release|x64.Build.0 = Release|Any CPU
 		{BFDF10B2-B445-4293-BBF1-A28D740C693D}.Release|x86.ActiveCfg = Release|Any CPU
 		{BFDF10B2-B445-4293-BBF1-A28D740C693D}.Release|x86.Build.0 = Release|Any CPU
+		{BBB8F23D-D5A4-44F7-9F48-8F040002AB35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBB8F23D-D5A4-44F7-9F48-8F040002AB35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBB8F23D-D5A4-44F7-9F48-8F040002AB35}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BBB8F23D-D5A4-44F7-9F48-8F040002AB35}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BBB8F23D-D5A4-44F7-9F48-8F040002AB35}.Debug|x64.Build.0 = Debug|Any CPU
+		{BBB8F23D-D5A4-44F7-9F48-8F040002AB35}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BBB8F23D-D5A4-44F7-9F48-8F040002AB35}.Debug|x86.Build.0 = Debug|Any CPU
+		{BBB8F23D-D5A4-44F7-9F48-8F040002AB35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBB8F23D-D5A4-44F7-9F48-8F040002AB35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBB8F23D-D5A4-44F7-9F48-8F040002AB35}.Release|x64.ActiveCfg = Release|Any CPU
+		{BBB8F23D-D5A4-44F7-9F48-8F040002AB35}.Release|x64.Build.0 = Release|Any CPU
+		{BBB8F23D-D5A4-44F7-9F48-8F040002AB35}.Release|x86.ActiveCfg = Release|Any CPU
+		{BBB8F23D-D5A4-44F7-9F48-8F040002AB35}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -584,6 +599,7 @@ Global
 		{33EAEC39-C43C-4226-AB8E-9D484A5DACE4} = {EF63D480-892F-4704-8A7A-A5D61F7EB050}
 		{266895DC-DA50-443B-F17C-ED71F20AFCCC} = {EF63D480-892F-4704-8A7A-A5D61F7EB050}
 		{BFDF10B2-B445-4293-BBF1-A28D740C693D} = {EF63D480-892F-4704-8A7A-A5D61F7EB050}
+		{BBB8F23D-D5A4-44F7-9F48-8F040002AB35} = {EF63D480-892F-4704-8A7A-A5D61F7EB050}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {77A83098-39B9-4A8F-A584-1CBAB34C0F7D}
