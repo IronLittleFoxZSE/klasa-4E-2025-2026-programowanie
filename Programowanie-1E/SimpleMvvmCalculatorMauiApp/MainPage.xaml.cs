@@ -1,4 +1,4 @@
-﻿namespace SimpleMvvmCalculatorMauiApp
+namespace SimpleMvvmCalculatorMauiApp
 {
     public partial class MainPage : ContentPage
     {
