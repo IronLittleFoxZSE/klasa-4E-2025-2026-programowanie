@@ -10,12 +10,12 @@
     <ScrollView>
         <VerticalStackLayout Padding="30,0"
                              Spacing="25">
+            <Label Text="Czy dzielenie" />
+            <CheckBox IsChecked="{Binding WhichSerwices}" />
             <Label Text="Pierwsza liczba:" />
             <Entry Text="{Binding StrFirstNumber}" />
             <Label Text="Druga liczba:" />
             <Entry Text="{Binding StrSecondNumber}" />
-            <Button Text="Oblicz"
-                    Command="{Binding CalculateCommand}" />
             <Button Text="Oblicz"
                     Command="{Binding CalculateCommand}" />
             <Label Text="{Binding ResultMessage}" />

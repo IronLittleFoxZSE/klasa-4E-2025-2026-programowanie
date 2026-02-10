@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SimpleMvvmCalculatorMauiApp.Model
+{
+    class SumService: ArithmeticService
+    {
+        public override string Calculate(string strFirstNumber, string strSecondNumber)
+        {
+            if (!int.TryParse(strFirstNumber, out int firstNumber)
+                       || !int.TryParse(strSecondNumber, out int secondNumber))
+                return "B³¹d przy konwersji liczb";
+
+            int result = firstNumber + secondNumber;
+
+            return "Wynik to: " + result.ToString();
+        }
+    }
+}

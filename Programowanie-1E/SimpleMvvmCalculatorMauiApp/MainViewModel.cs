@@ -1,3 +1,4 @@
+using SimpleMvvmCalculatorMauiApp.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,14 +9,22 @@ namespace SimpleMvvmCalculatorMauiApp
 {
     internal class MainViewModel : BindableObject
     {
-        public string StrFirstNumber { get; set; }
-        public string StrSecondNumber { get; set; }
+        public string StrFirstNumber
+        {
+            get { return dataRepository.strFirstNumber; }
+            set { dataRepository.strFirstNumber = value; }
+        }
 
-        private string resultMessage;
+        public string StrSecondNumber
+        {
+            get { return dataRepository.strSecondNumber; }
+            set { dataRepository.strSecondNumber = value; }
+        }
+
         public string ResultMessage
         {
-            get { return resultMessage; }
-            set { resultMessage = value; OnPropertyChanged(); }
+            get { return dataRepository.resultMessage; }
+            set { dataRepository.resultMessage = value; OnPropertyChanged(); }
         }
 
         /*
@@ -35,17 +44,30 @@ namespace SimpleMvvmCalculatorMauiApp
                 if (calculateCommand == null)
                     calculateCommand = new Command(() =>
                     {
-                        if (!int.TryParse(StrFirstNumber, out int firstNumber)
-                       || !int.TryParse(StrSecondNumber, out int secondNumber))
-                            return;
-
-                        int result = firstNumber + secondNumber;
-
-                        ResultMessage = "Wynik to: " + result.ToString();
+                        ResultMessage = service.Calculate(StrFirstNumber, StrSecondNumber);
                     });
                 return calculateCommand; 
             }
         }
+
+        private bool whichServices;
+        public bool WhichSerwices
+        {
+            get { return whichServices; }
+            set 
+            { 
+                whichServices = value;
+                if (whichServices)
+                    service = new DivService();
+                else
+                    service = new SumService();
+                    //service = new ArithmeticService();
+            }
+        }
+
+
+        private ArithmeticService service;
+        private DataRepository dataRepository;
 
         public MainViewModel()
         {
@@ -61,6 +83,12 @@ namespace SimpleMvvmCalculatorMauiApp
 
                 ResultMessage = "Wynik to: " + result.ToString();
             });*/
+
+            //service = new SumService();
+            //service = new DivService();
+            WhichSerwices = true;
+            dataRepository = new DataRepository();
+
         }
 
 
