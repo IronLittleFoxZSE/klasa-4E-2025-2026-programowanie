@@ -42,3 +42,14 @@ Microsoft.EntityFrameworkCore Version="9.0.13"
 Microsoft.EntityFrameworkCore.Relational Version="9.0.13"
 Microsoft.EntityFrameworkCore.Tools Version="9.0.13"
 Pomelo.EntityFrameworkCore.MySql Version="9.0.0"
+
+9. Wykonujemy polecenie w CMD. W poleceniu należy wpisać swoją nazwę bazy w connectionString oraz nazwę klasy dla parametru --context
+
+dotnet ef dbcontext scaffold "server=localhost;database=people4e2026;user=root" Pomelo.EntityFrameworkCore.MySql --output-dir Models --context PeopleDBContext --context-dir .
+
+dotnet ef dbcontext scaffold
+"server=localhost;database=people4e2026;user=root"
+Pomelo.EntityFrameworkCore.MySql
+--output-dir Models
+--context PeopleDBContext
+--context-dir .
