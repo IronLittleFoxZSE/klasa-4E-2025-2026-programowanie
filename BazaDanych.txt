@@ -1,0 +1,28 @@
+1. Stworzenie bazy
+
+People4E2026
+
+
+2. Dodanie tabel
+
+CREATE TABLE Person (
+    Id INT NOT NULL AUTO_INCREMENT,
+    Name VARCHAR(100) NOT NULL,
+    Surname VARCHAR(100) NOT NULL,
+    Age INT NOT NULL,
+    PRIMARY KEY (Id)
+);
+
+3. Uzupenienie danych
+
+INSERT INTO Person (Name, Surname, Age) VALUES
+('Jan', 'Kowalski', 30),
+('Anna', 'Nowak', 25),
+('Piotr', 'Wiśniewski', 40),
+('Katarzyna', 'Lewandowska', 35),
+('Marek', 'Kamiński', 28),
+('Ewa', 'Zielińska', 32),
+('Tomasz', 'Szymański', 45),
+('Agnieszka', 'Dąbrowska', 29),
+('Łukasz', 'Wójcik', 38),
+('Paweł', 'Kozłowski', 33);
