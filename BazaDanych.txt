@@ -35,3 +35,9 @@ INSERT INTO Person (Name, Surname, Age) VALUES
 
 7. Wykonujemy polecenie w CMD (TYLKO RAZ!!!!). Polecenie to instaluje rozszeżenie do platformy .NET.
 dotnet tool install --global dotnet-ef
+
+8. Do projektu repozytorium bazy danych dodajemy biblioteki. PPM na projekcie i wybieramy "Manage NuGet Packages..."
+
+Microsoft.EntityFrameworkCore Version="9.0.13"
+Microsoft.EntityFrameworkCore.Relational Version="9.0.13"
+Microsoft.EntityFrameworkCore.Tools Version="9.0.13"
