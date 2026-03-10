@@ -27,11 +27,11 @@ INSERT INTO Person (Name, Surname, Age) VALUES
 ('Łukasz', 'Wójcik', 38),
 ('Paweł', 'Kozłowski', 33);
 
-4. Tworzymy projekt reposytorium dla bazy danych
+4. Tworzymy projekt reposytorium dla bazy danych (class library)
 
 5. Otwieramy folder z projektem repozytorium bazy danych (PPM na projekcie i otwieramy File Explorer; opcja pod koniec menu)
 
-6. Otwieramy CMD i przechodzimy do folderu z projektem repozytorium bazy danych
+6. Otwieramy CMD i przechodzimy do folderu z projektem repozytorium bazy danych (wykorzystać ścieżkę z okna otwartego wcześniej)
 
 7. Wykonujemy polecenie w CMD (TYLKO RAZ!!!!). Polecenie to instaluje rozszeżenie do platformy .NET.
 dotnet tool install --global dotnet-ef
