@@ -8,3 +8,8 @@ https://forms.office.com/e/2Meh53XsSh
 Komputer 2,4,6,8,10,12,14,16
 
 https://forms.office.com/e/zB7fjLCdzk
+
+
+REFERATY:
+
+1. Czym jest sztuczna inteligencja? — definicje, historia i zastosowania
