@@ -53,3 +53,50 @@ Pomelo.EntityFrameworkCore.MySql
 --output-dir Models
 --context PeopleDBContext
 --context-dir .
+
+*. Dodajemy nową tabelę, powiązania i dane do nich
+
+CREATE TABLE Addresses (
+    Id INT NOT NULL AUTO_INCREMENT,
+    Street VARCHAR(150) NOT NULL,
+    City VARCHAR(100) NOT NULL,
+    PRIMARY KEY (Id)
+);
+
+INSERT INTO Addresses (Street, City) VALUES
+('Kwiatowa 12', 'Kielce'),
+('Lipowa 5', 'Warszawa'),
+('Słoneczna 8', 'Kraków'),
+('Leśna 21', 'Gdańsk'),
+('Południowa 3', 'Poznań');
+
+
+ALTER TABLE People
+ADD COLUMN AddressId INT NULL;
+
+ALTER TABLE People
+ADD CONSTRAINT FK_People_Addresses
+FOREIGN KEY (AddressId) REFERENCES Addresses(Id);
+
+DELETE FROM People;
+
+TRUNCATE TABLE People;
+
+INSERT INTO People (Name, Surname, Age) VALUES
+('Jan', 'Kowalski', 30),
+('Anna', 'Nowak', 25),
+('Piotr', 'Wiśniewski', 40),
+('Katarzyna', 'Lewandowska', 35),
+('Marek', 'Kamiński', 28),
+('Ewa', 'Zielińska', 32),
+('Tomasz', 'Szymański', 45),
+('Agnieszka', 'Dąbrowska', 29),
+('Łukasz', 'Wójcik', 38),
+('Paweł', 'Kozłowski', 33);
+
+
+UPDATE People SET AddressId = 1 WHERE Id IN (1, 2);
+UPDATE People SET AddressId = 2 WHERE Id IN (3, 4);
+UPDATE People SET AddressId = 3 WHERE Id IN (5, 6);
+UPDATE People SET AddressId = 4 WHERE Id IN (7, 8);
+UPDATE People SET AddressId = 5 WHERE Id IN (9, 10);
