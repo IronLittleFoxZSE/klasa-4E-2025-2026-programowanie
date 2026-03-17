@@ -13,3 +13,9 @@ https://forms.office.com/e/zB7fjLCdzk
 REFERATY:
 
 1. Czym jest sztuczna inteligencja? — definicje, historia i zastosowania
+
+Raferaty na adres:
+lukasz.felisek@ezse.pl
+
+Temat:
+[Imię Nazwisko] Klasa 4E Referat [numer referatu]
