@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using PeopleRepositoryClassLibrary.Dtos;
 using PeopleRepositoryClassLibrary.Models;
 using System;
 using System.Collections.Generic;
@@ -50,7 +51,8 @@ namespace PeopleRepositoryClassLibrary
 
         /*
         select *
-        from people4e2026.people
+        from people4e2026.people p
+        left join addresses a on a.Id = p.AddressId
         order by name, surname;
         */
 
@@ -58,8 +60,20 @@ namespace PeopleRepositoryClassLibrary
         {
             return context.People
                 .AsNoTracking()
+                .Include(p=> p.Address)
                 .OrderBy(p => p.Name)
                 .ThenBy(p => p.Surname)
+                .ToList();
+        }
+
+        public List<PersonDto> GetAllPeopleDto()
+        {
+            return context.People
+                .AsNoTracking()
+                .Include(p => p.Address)
+                .OrderBy(p => p.Name)
+                .ThenBy(p => p.Surname)
+                .Select(p=> new PersonDto() {Id = p.Id, Name = p.Name, Surname = p.Surname, Age = p.Age, FullName = p.Name + " " + p.Surname })
                 .ToList();
         }
 
@@ -72,6 +86,20 @@ namespace PeopleRepositoryClassLibrary
             if (personToUpdate != null)
             {
                 personToUpdate.Name = newName;
+
+                context.SaveChanges();
+            }
+        }
+
+        public void UpdatePerson(int id, string name, string surname, int age)
+        {
+            Person? person = context.People.FirstOrDefault(p => p.Id == id);
+
+            if (person != null)
+            {
+                person.Name = name;
+                person.Surname = surname;
+                person.Age = age;
 
                 context.SaveChanges();
             }
