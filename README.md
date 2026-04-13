@@ -14,6 +14,8 @@ REFERATY:
 
 1. Czym jest sztuczna inteligencja? — definicje, historia i zastosowania
 
+2. Czym są API i jak działają.
+
 Raferaty na adres:
 lukasz.felisek@ezse.pl
 
