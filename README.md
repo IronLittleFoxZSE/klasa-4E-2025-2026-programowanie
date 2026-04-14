@@ -16,6 +16,8 @@ REFERATY:
 
 2. Czym są API i jak działają.
 
+3. Kod źródłowy, kompilator i interpreter – proste wyjaśnienie
+
 Raferaty na adres:
 lukasz.felisek@ezse.pl
 
