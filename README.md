@@ -18,6 +18,8 @@ REFERATY:
 
 3. Kod źródłowy, kompilator i interpreter – proste wyjaśnienie
 
+4. Algorytmy sortowania — porównanie działania, złożoności i zastosowań (np. Bubble Sort vs QuickSort).
+
 Raferaty na adres:
 lukasz.felisek@ezse.pl
 
